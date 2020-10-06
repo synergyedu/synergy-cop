@@ -1,0 +1,161 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+
+AllCops:
+  TargetRubyVersion: 2.7
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  NewCops: enable
+  Exclude:
+    - "app/services/rpc/**/*"
+    - bin/bundle
+    - db/schema.rb
+    - db/versions_schema.rb
+    - Rakefile
+    - "vendor/**/*"
+
+Metrics/BlockLength:
+  Exclude:
+    - "lib/docs/**/*.rb"
+    - "lib/tasks/*.rake"
+    - "spec/**/*.rb"
+    - "db/migrate/*"
+    - "db/versions_migrate/*"
+    - "config/routes.rb"
+    - "app/api/v1/**/*.rb"
+
+Metrics/AbcSize:
+  Max: 20
+  Exclude:
+    - "db/migrate/*"
+    - "db/versions_migrate/*"
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/ClassLength:
+  Max: 200
+  Exclude:
+    - "lib/docs/**/*.rb"
+
+Metrics/MethodLength:
+  Max: 20
+  Exclude:
+    - "db/**/*.rb"
+
+Style/Alias:
+  EnforcedStyle: prefer_alias_method
+
+Style/Documentation:
+  Enabled: false
+
+Style/ExpandPathArguments:
+  Exclude:
+    - bin/rails
+    - bin/rake
+
+Style/FormatStringToken:
+  Exclude:
+    - lib/docs/**/*
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - Gemfile
+    - "db/migrate/*.rb"
+    - "db/versions_migrate/*.rb"
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/SpaceInLambdaLiteral:
+  EnforcedStyle: require_space
+
+Layout/SpaceInsideStringInterpolation:
+  EnforcedStyle: space
+
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: required
+
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: key
+  EnforcedColonStyle: key
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "spec/**/*"
+
+Rails/BulkChangeTable:
+  Enabled: false
+
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+Rails/NotNullColumn:
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Exclude:
+    - "spec/**/*"
+
+RSpec/ContextWording:
+  Prefixes:
+    - when
+    - with
+    - without
+    - and
+    - but
+    - for
+
+Rails/FilePath:
+  EnforcedStyle: arguments
+
+Rails/UnknownEnv:
+  Environments:
+    - development
+    - production
+    - test
+
+RSpec/DescribeClass:
+  Exclude:
+    - "spec/requests/*"
+
+RSpec/EmptyExampleGroup:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 10
+
+RSpec/HookArgument:
+  Enabled: false
+
+RSpec/ImplicitBlockExpectation:
+  Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Max: 10
