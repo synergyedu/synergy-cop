@@ -10,15 +10,13 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'Dependency and configuration for rubocop.'
   spec.description   = 'Dependency and configuration for rubocop for all project written in SynegySoft'
-  spec.homepage      = 'https://synergy.ru'
+  spec.homepage      = 'https://github.com/synergyedu/synergy-cop'
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
 
-  spec.metadata['allowed_push_host'] = spec.homepage
-
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = 'https://github.com/synergyedu/synergy-cop'
-  spec.metadata['changelog_uri'] = "#{ spec.metadata['source_code_uri'] }/CHANGELOG.md"
+  spec.metadata['changelog_uri'] = "#{spec.homepage}/blob/master/CHANGELOG.md"
+  spec.metadata['source_code_uri'] = spec.homepage
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
