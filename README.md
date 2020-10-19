@@ -4,24 +4,41 @@ This repository hosts SynergySoft configurations for gem for rubocop.
 
 The configurations provided here are intended to apply to all of the SynergySoft repositories.
 
-Your application might have special rules of its own, which you can freely override in your local configuration. But if you think a rule is of general
-relevance, then it should probably live here.
+Your application might have special rules of its own, which you can freely override in your local configuration. But if you think a rule is of general relevance, then it should probably live here.
 
-## Usage
+## Installation
 
 Include this gem in your Gemfile:
 
 ```ruby
-gem 'synergy-cop'
+group :development, :test do
+  gem 'synergy-cop'
+end
 ```
 
-Let your `.rubocop.yml` inherit from this gem:
+Or install via cli command:
+
+```
+gem install synergy-cop
+```
+
+Let your `.rubocop.yml` inherit from this gem, add following rows:
 
 ```yml
 inherit_gem:
   synergy-cop:
     - default.yml
 ```
+
+## Usage
+
+If you've installed the gem including it to Gemfile, then you have to use Bundler in order to find the dependency’s installation path at runtime:
+
+```
+bundle exec rubocop <options...>
+```
+
+If you've installed the gem via cli, you can use rubocop without `bundle exec`. But this is not recommended way, because you can miss updates easily.
 
 ## Customizing rules
 
