@@ -1,3 +1,2 @@
-inherit_gem:
-  synergy-cop:
-    - default.yml
+inherit_from:
+  - default.yml
