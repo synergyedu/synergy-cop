@@ -1,3 +1,8 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+
 AllCops:
   TargetRubyVersion: 2.7
   DisplayCopNames: true
@@ -59,3 +64,62 @@ Layout/HashAlignment:
 Lint/AmbiguousBlockAssociation:
   Exclude:
     - "spec/**/*"
+
+RSpec/EmptyExampleGroup:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 10
+
+RSpec/HookArgument:
+  Enabled: false
+
+RSpec/ImplicitBlockExpectation:
+  Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Max: 10
+
+RSpec/ContextWording:
+  Prefixes:
+    - when
+    - with
+    - without
+    - and
+    - but
+    - for
+
+Style/ExpandPathArguments:
+  Exclude:
+    - bin/rails
+    - bin/rake
+    
+Rails/BulkChangeTable:
+  Enabled: false
+
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+Rails/NotNullColumn:
+  Enabled: false
+
+Rails/FilePath:
+  EnforcedStyle: arguments
+
+Rails/UnknownEnv:
+  Environments:
+    - development
+    - production
+    - test
