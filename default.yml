@@ -1,5 +1,4 @@
 require:
-  - rubocop-rails
   - rubocop-rspec
   - rubocop-performance
 
@@ -100,26 +99,3 @@ RSpec/ContextWording:
     - and
     - but
     - for
-
-Style/ExpandPathArguments:
-  Exclude:
-    - bin/rails
-    - bin/rake
-    
-Rails/BulkChangeTable:
-  Enabled: false
-
-Rails/HttpPositionalArguments:
-  Enabled: false
-
-Rails/NotNullColumn:
-  Enabled: false
-
-Rails/FilePath:
-  EnforcedStyle: arguments
-
-Rails/UnknownEnv:
-  Environments:
-    - development
-    - production
-    - test
